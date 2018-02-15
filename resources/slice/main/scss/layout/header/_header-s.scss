@@ -1,0 +1,96 @@
+.site-header {
+
+  .site-container {
+    height: 70px;
+    padding-top: 22px;
+    position: static;
+  }
+
+  .nav-active & {
+
+    .nav ul.menu {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .btn-nav {
+
+      &:before {
+        top: 10px;
+        @include transform(rotate3d(0, 0, 1, -45deg));
+      }
+
+      &:after {
+        bottom: 12px;
+        @include transform(rotate3d(0, 0, 1, 45deg));
+      }
+    }
+  }
+
+  .logo {
+    padding: 16px 10px 15px;
+    left: 5%;
+    width: 80px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  .nav {
+
+    & > ul.menu {
+      opacity: 0;
+      visibility: hidden;
+      @include transition(all .3s);
+      font-size: 20px;
+      padding: 45px 30px 30px 30px;
+      position: absolute;
+      top: 100%;
+      right: 0;
+      left: 0;
+      background: #304349;
+
+      .nav-active & {
+        display: block;
+      }
+
+      & > li {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+
+      a {
+        color: #fff;
+      }
+
+      ul {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding-left: 20px;
+        border-left: 2px solid #fff;
+
+        li {
+          margin-bottom: 10px;
+
+          &:last-child {
+            margin-bottom: 0;
+          }
+
+          a {
+            padding-left: 0;
+            color: $color-a;
+
+            &:before {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

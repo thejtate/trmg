@@ -1,0 +1,99 @@
+.b-tabs {
+  color: $color-c;
+  padding: 59px 0;
+
+  .tabs-content-outer, .tabs-control, .tabs-content {
+
+    & > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      & > li {
+        margin: 0;
+        padding: 0;
+      }
+    }
+  }
+
+  .tabs-control {
+    font-size: 18px;
+    width: 615px;
+    margin: 0 auto 50px;
+    position: relative;
+    z-index: 5;
+    border: 2px solid $color-c;
+
+    &.active {
+
+      .tab-btn:before {
+        @include transform(rotate(180deg));
+      }
+
+      & > ul {
+        display: block;
+      }
+    }
+
+    & > ul {
+      display: none;
+      position: absolute;
+      left: -2px;
+      top: 100%;
+      right: -2px;
+      background: $color-c;
+      max-height: 424px;
+      padding: 22px 0;
+
+      & > li {
+        padding: 0 30px;
+        background: transparent;
+        color: #fff;
+        @include transition(all .2s);
+
+        &.active, &:hover {
+          color: $color-c;
+          background: #fff;
+        }
+      }
+
+      a {
+        padding: 6px 0;
+      }
+    }
+
+    .tab-btn {
+      padding: 22px 55px 22px 30px;
+      overflow: hidden;
+      letter-spacing: 5px;
+      text-overflow: ellipsis;
+      text-transform: uppercase;
+      position: relative;
+      white-space: nowrap;
+
+      &:before {
+        @include oneline-sprite-box($icons, icon-arrow-c);
+        @include pseudo-block($right: 26px, $top: 50%);
+        margin-top: -4px;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+    }
+  }
+
+  .tabs-content-outer, .tabs-content {
+
+    & > ul {
+
+      & > li {
+
+        &.active {
+          display: block !important;
+        }
+      }
+    }
+  }
+}

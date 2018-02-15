@@ -1,0 +1,22 @@
+.b-tabs {
+  padding: 40px 0;
+
+  .tabs-control {
+    width: 100%;
+    margin-bottom: 30px;
+    font-size: 14px;
+
+    & > ul {
+      padding: 14px 0;
+
+      & > li {
+        padding: 0 20px;
+      }
+    }
+
+    .tab-btn {
+      letter-spacing: 0;
+      padding: 15px 55px 15px 20px;
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.site-footer {
+  background: $color-f;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.6;
+  text-transform: uppercase;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .site-container {
+    height: 129px;
+  }
+
+  a {
+    color: #fff;
+    text-decoration: underline;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
+  .col {
+    float: left;
+    margin-left: 30px;
+    padding-top: 28px;
+  }
+
+  .col-1 {
+    margin-left: 0;
+  }
+
+  address a {
+    text-decoration: none;
+  }
+}

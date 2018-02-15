@@ -1,0 +1,21 @@
+.b-hex {
+
+  &:before {
+    @include pseudo-block($left: 50%, $top: 0, $bottom: 0);
+    width: 4000px;
+    margin-left: -2000px;
+    z-index: -1;
+    background: #fff image-url('bg/bg-4.png') 50% -34px repeat-x;
+  }
+
+  .hex {
+    width: 355px;
+    height: 205px;
+    margin: 67px 17px;
+    float: left;
+
+    &:first-child {
+      margin-left: 214px;
+    }
+  }
+}

@@ -1,0 +1,17 @@
+.b-hex {
+  text-align: center;
+
+  .hex {
+    width: 310px;
+    height: 180px;
+    margin: 67px 22px;
+    display: inline-block;
+    vertical-align: top;
+
+    &:nth-child(3) {
+      display: block;
+      margin: 67px auto;
+      float: none;
+    }
+  }
+}

@@ -1,0 +1,61 @@
+.b-philosophy {
+  font-size: 16px;
+  color: #49636c;
+  font-family: $maven_pro_medium;
+  line-height: 1.6;
+  position: relative;
+  z-index: 1;
+
+  &:before {
+    @include pseudo-block($left: 50%, $top: 0, $bottom: 0);
+    width: 4000px;
+    margin-left: -2000px;
+    background: #ffffff;
+    z-index: -1;
+  }
+
+  .inner-block {
+    @include clearfix();
+  }
+
+  .img {
+    padding-top: 23px;
+    padding-bottom: 21px;
+    position: relative;
+
+    &:before {
+      @include pseudo-block($left: -31px, $top: 0);
+      background: image-url('bg/bg-3.png') no-repeat;
+      width: 469px;
+      height: 524px;
+    }
+
+    img {
+      display: block;
+    }
+
+    .region-after, .region-before {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      height: 100%;
+      width: 2000px;
+      background: image-url('bg/bg-3.png') repeat-x;
+    }
+
+    .region-after {
+      left: -2028px;
+      background-position: 100% 0;
+    }
+
+    .region-before {
+      right: -2004px;
+    }
+  }
+
+  .text {
+    position: relative;
+    z-index: 2;
+    padding: 103px 0 60px;
+  }
+}

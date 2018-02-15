@@ -1,0 +1,52 @@
+.content-wrapper {
+
+  .img-top {
+    max-height: 545px;
+
+    .desc {
+      width: 771px;
+      padding: 50px 40px;
+      letter-spacing: 7px;
+    }
+  }
+
+  .block-desc {
+    padding: 70px 10px;
+    font-size: 23px;
+    line-height: 1.8;
+
+    .hex {
+      margin: 30px 11px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  .page-icon-wrapper {
+    margin: -70px auto 105px auto;
+  }
+
+  .cols {
+
+    &.col-one {
+      max-width: 660px;
+      margin-right: auto;
+      margin-left: auto;
+    }
+
+    &.col-two {
+
+      .first {
+        padding-left: 176px;
+        padding-right: 30px;
+      }
+
+      .last {
+        padding-left: 30px;
+        padding-right: 186px;
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+.content-wrapper {
+
+  .img-top {
+    height: 300px;
+
+    .page-attorney & {
+      height: auto;
+    }
+
+    img {
+      width: 830px;
+      height: auto;
+      position: relative;
+      left: 50%;
+      margin-left: -415px;
+    }
+
+    .desc {
+      width: 90%;
+      padding: 10px;
+    }
+  }
+
+  .block-desc {
+    padding: 40px 0;
+
+    h2 {
+      padding: 28px 10px;
+      letter-spacing: 2px;
+    }
+  }
+
+  .page-icon-wrapper {
+    margin: -110px auto 15px auto;
+    @include transform(scale(.4));
+  }
+
+  .cols {
+    margin-bottom: 20px;
+
+    .column {
+      float: none !important;
+      width: 100% !important;
+    }
+  }
+
+  .block-desc {
+
+    .hex {
+      margin: 27px 8px;
+      width: 120px;
+      height: 70px;
+
+      &:nth-child(3n + 3) {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .border {
+        height: 64px;
+      }
+
+      .inner {
+        font-size: 12px;
+      }
+
+      .link {
+        bottom: -24px;
+        top: -24px;
+      }
+    }
+  }
+
+  .block-text {
+    padding: 30px 0 10px;
+
+    h2 {
+      margin-bottom: 20px;
+      font-size: 24px;
+    }
+
+    h3 {
+      margin-bottom: 16px;
+      font-size: 18px;
+    }
+  }
+}

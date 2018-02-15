@@ -1,0 +1,171 @@
+.site-header {
+
+  .site-container {
+    height: 103px;
+    //    padding-top: 41px;
+  }
+
+  .logo {
+    left: 5px;
+  }
+
+  .btn-nav {
+    display: none;
+  }
+
+  .social-links {
+    padding-top: 41px;
+  }
+
+  .nav {
+    font-size: 17px;
+
+    & > ul.menu {
+      @include clearfix();
+
+      & > li {
+        float: left;
+        margin-left: 25px;
+
+        &.active, &:hover {
+
+          & > a {
+
+            &:before {
+              @include transform(translate(-50%, 25px));
+            }
+          }
+        }
+
+        &.expanded:hover > a:after {
+          opacity: 1;
+        }
+
+        &:hover > ul {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &.expanded > a {
+
+          &:after {
+            @include pseudo-block($left: 50%, $top: 100%);
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-bottom: 25px solid #304349;
+            @include transition(opacity .3s);
+            @include transform(translate(-50%, -25px));
+            opacity: 0;
+          }
+
+          &.active:after {
+            opacity: 1;
+          }
+        }
+
+        & > a {
+          @include transition(color .3s);
+          position: relative;
+          padding: 42px 0;
+          display: block;
+          height: 103px;
+
+          &:before {
+            @include pseudo-block($left: 50%, $bottom: 100%);
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-top: 25px solid #304349;
+            @include transition(transform .3s);
+            @include transform(translate(-50%, 0px));
+          }
+        }
+      }
+
+      ul {
+        @include transition(all .3s);
+        visibility: hidden;
+        opacity: 0;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        text-transform: none;
+        font-family: $maven_pro_regular;
+        font-size: 14px;
+        padding: 18px 0;
+        text-align: right;
+
+        //        &:after {
+        //          @include pseudo-block($left: 0, $bottom: 100%, $right: 0);
+        //          height: 40px;
+        //        }
+
+        &:before {
+          @include pseudo-block($left: 50%, $top: 0, $bottom: 0);
+          height: 100%;
+          width: 4000px;
+          margin-left: -2000px;
+          background: #304349;
+          z-index: -1;
+        }
+
+        li {
+          display: inline-block;
+          vertical-align: middle;
+          padding-left: 30px;
+          margin-left: 23px;
+          position: relative;
+          text-align: left;
+          max-width: 220px;
+
+          &:before {
+            @include pseudo-block($left: 0, $top: 50%);
+            height: 66px;
+            border-left: 1px solid #4c676f;
+            @include transform(translate(0, -50%));
+          }
+
+          &:first-child {
+            padding-left: 0;
+            margin-left: 0;
+            width: 134px;
+
+            &:before {
+              display: none;
+            }
+          }
+
+          &:nth-child(2) {
+            width: 172px;
+          }
+
+          &:nth-child(3) {
+            width: 180px;
+          }
+
+          &:nth-child(4) {
+            width: 192px;
+          }
+
+          &:nth-child(5) {
+            width: 142px;
+          }
+
+          a {
+            padding-top: 19px;
+            padding-bottom: 19px;
+            @include transition(color .3s);
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

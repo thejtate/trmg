@@ -1,0 +1,40 @@
+.content-wrapper {
+
+  .img-top {
+
+    .desc {
+      width: 580px;
+      padding: 20px;
+      letter-spacing: 4px;
+    }
+  }
+
+  .block-desc {
+    padding: 40px 10px;
+    font-size: 20px;
+    line-height: 1.4;
+
+    .hex {
+      margin: 63px 11px;
+
+      &:first-child {
+        margin-left: 21px;
+      }
+    }
+  }
+
+  .page-icon-wrapper {
+    margin: -70px auto 20px auto;
+    @include transform(scale(.4));
+  }
+
+  .cols {
+
+    &.col-two {
+
+      .first, .last {
+        padding: 0 30px;
+      }
+    }
+  }
+}

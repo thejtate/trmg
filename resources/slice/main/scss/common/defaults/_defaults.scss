@@ -1,0 +1,127 @@
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  height: 100%;
+  font-size: 16px;
+  font-family: $maven_pro_regular;
+  line-height: 1.2;
+  background: $color-d;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+
+  &:not(.mobile-device) a[href^="tel"] {
+    text-decoration: none;
+    pointer-events: none;
+  }
+
+  a[href^="tel"] {
+    text-decoration: underline;
+  }
+}
+
+*, :after, :before {
+  @include box-sizing(border-box);
+  outline: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+  margin: 0;
+  color: inherit;
+}
+
+h1, h2 {
+  text-transform: uppercase;
+  font-family: $maven_pro_regular;
+}
+
+h1 {
+  line-height: 1.6;
+  text-transform: uppercase;
+}
+
+h5 {
+  text-transform: uppercase;
+}
+
+h6 {
+  font-family: $maven_pro_black;
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+
+h4 {
+  font-size: 36px;
+  text-transform: uppercase;
+  font-family: $maven_pro_bold;
+  text-align: center;
+  margin-bottom: 50px;
+  letter-spacing: 7px;
+
+  span {
+    text-transform: none;
+  }
+}
+
+img[style*="right"] {
+  margin: 0 0 10px 20px;
+  clear: right;
+}
+
+img[style*="left"] {
+  margin: 0 20px 10px 0;
+  clear: left;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+p {
+  margin: 0 0 20px;
+}
+
+ul {
+  margin: 0;
+  padding: 0 0 0 16px;
+
+  li {
+    margin: 0 0 16px;
+    padding: 0;
+  }
+}
+
+.full-block {
+  position: relative;
+  left: 50%;
+
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+a {
+  color: inherit;
+}
+
+address {
+  font-style: normal;
+  text-decoration: none;
+
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}

@@ -1,0 +1,93 @@
+.b-foundation {
+  padding-top: 40px;
+  margin-bottom: 80px;
+
+  h2 {
+    margin-bottom: 40px;
+  }
+
+  .cols {
+
+    h2 {
+      margin-bottom: 16px;
+      font-size: 28px;
+    }
+  }
+
+//  .hex-wrapper .inner {
+//    display: none;
+//  }
+
+  .mobile-hex-wrapper {
+    display: block;
+    width: 290px;
+    margin: 0 auto;
+  }
+
+  .hex-desc-wrapper .hex-desc:first-child {
+    margin-left: 61px;
+  }
+
+  .hex {
+    margin: 37px 5px 2px;
+    width: 102px;
+    height: 59px;
+    @include background-size(auto 116px);
+
+    .corner-1, .corner-2 {
+
+      &:before {
+        width: 190px;
+        height: 117px;
+      }
+    }
+
+    .corner-2 {
+
+      &:before {
+        @include transform(rotate(60deg) translate(-47px, 23px));
+      }
+    }
+
+    .wrap:before, .arrow {
+      display: none;
+    }
+
+    .inner {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  .hex-a {
+    margin: 9px 5px -27px;
+    height: 118px;
+    -webkit-clip-path: polygon(50% 0, 100% 30px, 100% 88px, 50% 100%, 0% 88px, 0% 30px);
+    clip-path: polygon(50% 0, 100% 30px, 100% 88px, 50% 100%, 0% 88px, 0% 30px);
+
+    *:not(.desc-link):not(.overlay):not(.inner) {
+      display: none !important;
+    }
+  }
+
+  .mobile-content {
+    padding-bottom: 24px;
+    position: relative;
+
+    .tel, p, .field-name-field-staff-email {
+      @include transform(scale(.5));
+      position: absolute;
+    }
+
+    .tel {
+      left: -3px;
+      bottom: -21px;
+    }
+
+    p, .field-name-field-staff-email {
+      padding-left: 15px;
+      right: -8px;
+      bottom: -13px;
+    }
+  }
+}

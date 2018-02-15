@@ -1,0 +1,58 @@
+.b-attorney {
+  margin-bottom: 50px;
+
+  .hex-a, .hex {
+    width: 230px;
+    @include background-size(auto 267px);
+  }
+
+  .hex-a {
+    margin-top: -67px;
+    margin-bottom: -67px;
+    height: 267px;
+    -webkit-clip-path: polygon(50% 0, 100% 67px, 100% 200px, 50% 100%, 0% 200px, 0% 67px);
+    clip-path: polygon(50% 0, 100% 67px, 100% 200px, 50% 100%, 0% 200px, 0% 67px);
+  }
+
+  .hex {
+    height: 134px;
+    margin-right: 30px;
+
+    .corner-1, .corner-2 {
+
+      &:before {
+        width: 267px;
+        height: 267px;
+      }
+    }
+
+    .corner-1 {
+
+      &:before {
+        @include transform(rotate(-60deg) translate(-134px, 0px));
+      }
+    }
+
+    .corner-2 {
+
+      &:before {
+        @include transform(rotate(60deg) translate(-67px, -17px));
+      }
+    }
+  }
+
+  .desc {
+    width: 276px;
+    margin-right: 40px;
+    padding-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  .text {
+    overflow: visible;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+}

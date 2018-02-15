@@ -1,0 +1,142 @@
+.b-hex {
+  @include clearfix();
+  margin: -20px 0;
+  position: relative;
+  z-index: 1;
+
+  .hex {
+    background: #d8d8d8;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    position: relative;
+    color: $color-a;
+    z-index: 1;
+    text-align: center;
+    zoom: 1;
+    @include transition(background .3s);
+
+    &.hovered {
+
+      &:before {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      .inner {
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+
+    &:before {
+      @include pseudo-block($left: 50%, $top: 50%);
+      @include transform(translate(-50%, -50%));
+      @include transition(all .3s);
+      visibility: hidden;
+      opacity: 0;
+    }
+
+    &:first-child {
+
+      &:before {
+        @include oneline-sprite-box($icons, icon-5-big);
+      }
+
+      &.hovered {
+        background: $color-f;
+      }
+    }
+
+    &:nth-child(2) {
+
+      &:before {
+        @include oneline-sprite-box($icons, icon-2-big);
+      }
+
+      &.hovered {
+        background: $color-e;
+      }
+    }
+
+    &:nth-child(3) {
+
+      &:before {
+        @include oneline-sprite-box($icons, icon-1-big);
+      }
+
+      &.hovered {
+        background: $color-c;
+      }
+    }
+
+    &:nth-child(4) {
+
+      &:before {
+        @include oneline-sprite-box($icons, icon-3-big);
+      }
+
+      &.hovered {
+        background: $color-a;
+      }
+    }
+
+    &:nth-child(5) {
+
+      &:before {
+        @include oneline-sprite-box($icons, icon-4-big);
+      }
+
+      &.hovered {
+        background: $color-g;
+      }
+    }
+
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      @include text-hide();
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .corner-1, .corner-2 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: inherit;
+      z-index: -2;
+      overflow: hidden;
+      @include backface-visibility(hidden);
+    }
+
+    .corner-1 {
+      z-index:-1;
+      @include transform(rotate(60deg));
+    }
+
+    .corner-2 {
+      @include transform(rotate(-60deg));
+    }
+
+    .inner {
+      visibility: visible;
+      opacity: 1;
+      @include transition(all .3s);
+      padding: 0 25px 0 31px;
+      top: 50%;
+      letter-spacing: 6px;
+      text-indent: 6px;
+      font-family: $maven_pro_black;
+      position: relative;
+      @include transform(translate(0, -50%));
+    }
+  }
+}

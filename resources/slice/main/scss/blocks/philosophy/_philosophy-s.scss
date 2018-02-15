@@ -1,0 +1,29 @@
+.b-philosophy {
+  font-size: 16px;
+  line-height: 1.4;
+
+  .img {
+    width: 260px;
+    margin: 0 auto;
+    padding: 15px 0;
+
+    &:before {
+      @include background-size(100% 100%);
+      width: 309px;
+      height: 312px;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+
+    .region-after, .region-before {
+      display: none;
+    }
+  }
+
+  .text {
+    padding: 40px 0;
+  }
+}

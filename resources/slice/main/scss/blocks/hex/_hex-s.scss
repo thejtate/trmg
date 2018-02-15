@@ -1,0 +1,104 @@
+.b-hex {
+  text-align: center;
+
+  .hex {
+    width: 129px;
+    height: 75px;
+    margin: 40px 5px;
+    display: inline-block;
+    vertical-align: top;
+    color: #fff;
+
+    &.hovered {
+
+      .inner {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+
+    &:before {
+      top: -104px;
+      visibility: visible;
+      opacity: 1;
+      @include transform-origin(0);
+      @include transform(scale(.2) translate(-50%, 0));
+    }
+
+    &:first-child {
+      background: $color-f;
+
+      &:before {
+        top: -108px;
+      }
+
+      .inner {
+        top: 54px;
+      }
+    }
+
+    &:nth-child(2) {
+      background: $color-e;
+
+      &:before {
+        top: -91px;
+      }
+
+      .inner {
+        top: 54px;
+      }
+    }
+
+    &:nth-child(3) {
+      display: block;
+      margin: 10px auto;
+      float: none;
+      background: $color-c;
+
+      &:before {
+        top: -102px;
+      }
+
+      .inner {
+        top: 50px;
+      }
+    }
+
+    &:nth-child(4) {
+      background: $color-a;
+
+      &:before {
+        top: -112px;
+      }
+
+      .inner {
+        top: 44px;
+      }
+    }
+
+    &:nth-child(5) {
+      background: $color-g;
+
+      &:before {
+        top: -106px;
+      }
+
+      .inner {
+        top: 46px;
+      }
+    }
+
+    .inner {
+      padding: 0 20px;
+      letter-spacing: 0;
+      text-indent: 0;
+      position: absolute;
+      top: 50px;
+      @include transform(translate(0, 0));
+    }
+
+    h5 {
+      font-size: 10px;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.site-footer {
+  position: static;
+  padding-bottom: 20px;
+
+  .site-container {
+    height: auto;
+  }
+
+  .col {
+    margin-left: 0;
+  }
+
+  .col-1 {
+    width: 170px;
+  }
+
+  .col-2 {
+    width: 100px;
+    margin-left: 10px;
+  }
+}

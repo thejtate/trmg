@@ -1,0 +1,26 @@
+.b-attorney {
+  margin-bottom: 30px;
+
+  .hex, .hex-a {
+    display: none !important;
+  }
+
+  .block-hd {
+    margin-top: 0;
+    padding: 0;
+    margin-bottom: 30px;
+
+    .inner {
+      padding: 20px;
+      text-align: center;
+    }
+  }
+
+  .desc {
+    float: none;
+    width: 100%;
+    margin-right: 0;
+    padding-top: 0;
+    margin-bottom: 25px;
+  }
+}

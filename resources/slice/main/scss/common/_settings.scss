@@ -1,0 +1,26 @@
+$icons: sprite-map('icons/*.png', $spacing: 8px, $layout: 'smart');
+//$h-sprites: sprite-map('h-sprites/*.png',$layout: 'vertical', $spacing: 8px);
+//$v-sprites: sprite-map('v-sprites/*.png', $layout: 'horizontal', $spacing: 8px);
+
+$experimental-support-for-svg: true;
+$experimental-support-for-opera: false;
+
+//width
+$width: 1170px;
+$width-tablet: 768px;
+$width-mobile: 480px;
+
+//colors
+$color-a: #A9A472;
+$color-b: #e3e2d7;
+$color-c: #924d5c;
+$color-d: #f6f1f2;
+$color-e: #c8995c;
+$color-f: #4e6a74;
+$color-g: #758674;
+
+//fonts
+$maven_pro_regular: maven_pro_regular;
+$maven_pro_medium: maven_pro_medium;
+$maven_pro_bold: maven_pro_bold;
+$maven_pro_black: maven_pro_black;

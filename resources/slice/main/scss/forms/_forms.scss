@@ -1,0 +1,89 @@
+.form {
+
+  .form-item, .form-actions {
+    margin: 0 0 27px;
+  }
+
+  .field-error {
+    position: relative;
+
+    .form-text, textarea {
+      border: 1px solid red;
+      @include box-shadow(inset 0 2px 11px 5px rgba(255, 0, 0, .1));
+    }
+  }
+
+  .form-text, textarea {
+    width: 100%;
+    @include input-placeholder($color-f);
+    font-size: 18px;
+    padding: 10px 18px;
+    border: 1px solid #999999;
+    color: $color-f;
+    @include box-shadow(inset 0 2px 11px 5px #f7f7f7);
+    @include transition(box-shadow .3s);
+
+    &:focus {
+      @include box-shadow(inset 0 2px 11px 5px rgba(146, 77, 92, .1));
+    }
+  }
+
+  .tooltip {
+    position: absolute;
+    left: 100%;
+    top: 50%;
+    color: #fff;
+    background: red;
+    padding: 6px 10px 8px;
+    display: block;
+    @include border-radius(4px);
+    @include transform(translate(10px, -50%));
+
+    @media (max-width: $width-tablet - 1) {
+      display: none;
+    }
+  }
+
+  textarea {
+    height: 140px;
+    resize: none;
+  }
+
+  .description {
+    text-align: left;
+    font-family: $maven_pro_regular;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    color: $color-f;
+  }
+
+  .form-submit {
+    font-family: $maven_pro_bold;
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 7px;
+    padding: 6px 28px;
+    border: 1px solid #999;
+    @include background-image(linear-gradient(top, #778c92 0%, #4f6b75 100%));
+
+    &:hover {
+      @include background-image(linear-gradient(top, #4f6b75 0%, #778c92 100%));
+    }
+  }
+}
+
+.form-message {
+  text-align: center;
+  padding: 20px;
+  background: rgba(179, 206, 89, .4);
+  border: 1px solid #b3ce59;
+  max-width: 570px;
+  margin: 50px auto 0;
+}
+
+#user-login {
+  max-width: 600px;
+  margin: 0 auto;
+}

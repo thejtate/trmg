@@ -1,0 +1,8 @@
+.content-wrapper {
+  padding-bottom: 0;
+
+  .page-without-top-img & {
+    padding-top: 60px;
+    padding-bottom: 50px;
+  }
+}

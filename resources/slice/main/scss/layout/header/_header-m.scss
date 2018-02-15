@@ -1,0 +1,123 @@
+.site-header {
+
+  .site-container {
+    height: 90px;
+    //    padding-top: 41px;
+  }
+
+  .social-links {
+    display: none;
+  }
+
+  .logo {
+    left: 5px;
+  }
+
+  .btn-nav {
+    display: none;
+  }
+
+  .social-links {
+    padding-top: 41px;
+  }
+
+  .nav {
+    font-size: 14px;
+
+    &>ul.menu {
+      @include clearfix();
+
+      & > li {
+        float: left;
+        margin-left: 32px;
+
+        &.active, &:hover {
+
+          & > a {
+
+            &:before {
+              @include transform(translate(-50%, 20px));
+            }
+          }
+        }
+
+        &:hover > ul {
+          visibility: visible;
+          opacity: 1;
+        }
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        & > a {
+          @include transition(color .3s);
+          position: relative;
+          padding: 38px 0;
+          display: block;
+          height: 90px;
+
+          &:before {
+            @include pseudo-block($left: 50%, $bottom: 100%);
+            border-left: 40px solid transparent;
+            border-right: 40px solid transparent;
+            border-top: 25px solid #304349;
+            @include transition(transform .3s);
+            @include transform(translate(-50%, 0));
+          }
+        }
+      }
+
+      ul {
+        visibility: hidden;
+        opacity: 0;
+        @include transition(all .3s);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        text-transform: none;
+        font-family: $maven_pro_regular;
+        font-size: 14px;
+        padding: 65px 0 35px;
+        text-align: left;
+        width: 525px;
+        margin: 0 auto;
+        @include clearfix();
+
+        &:before {
+          @include pseudo-block($left: 50%, $top: 0, $bottom: 0);
+          height: 100%;
+          width: 4000px;
+          margin-left: -2000px;
+          background: #304349;
+          z-index: -1;
+        }
+
+        li {
+          float: left;
+          margin-left: 23px;
+          position: relative;
+          text-align: left;
+          width: 250px;
+          min-height: 70px;
+
+          &:nth-child(2n + 1) {
+            clear: left;
+            margin-left: 0;
+          }
+
+          a {
+            padding-top: 19px;
+            padding-bottom: 19px;
+            @include transition(color .3s);
+
+            &:hover {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+}

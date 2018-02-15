@@ -1,0 +1,206 @@
+.b-tabs-without-hexes {
+  padding: 20px 0 59px;
+  color: $color-f;
+
+  .page-inventions-and-branding & {
+    color: $color-c;
+  }
+
+  .page-litigation-and-product-safety & {
+    color: $color-e;
+  }
+
+  .page-business-transactions-disputes & {
+    color: $color-a;
+  }
+
+  .page-employer-defense & {
+    color: $color-g;
+  }
+
+  .page-insurance-litigation & {
+    color: $color-f;
+  }
+
+  .tabs-control, .tabs-content {
+
+    & > ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      & > li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+    }
+  }
+
+  .tabs-control {
+    font-size: 18px;
+    max-width: 660px;
+    margin: 0 auto 50px;
+    position: relative;
+    z-index: 5;
+    border: 2px solid $color-f;
+
+    .page-inventions-and-branding & {
+      border: 2px solid $color-c;
+    }
+
+    .page-litigation-and-product-safety & {
+      border: 2px solid $color-e;
+    }
+
+    .page-business-transactions-disputes & {
+      border: 2px solid $color-a;
+    }
+
+    .page-employer-defense & {
+      border: 2px solid $color-g;
+    }
+
+    .page-insurance-litigation & {
+      border: 2px solid $color-f;
+    }
+
+    &.active {
+
+      .tab-btn:before {
+        @include transform(rotate(180deg));
+      }
+
+      & > ul {
+        display: block;
+      }
+    }
+
+    & > ul {
+      display: none;
+      position: absolute;
+      left: -2px;
+      top: 100%;
+      right: -2px;
+      max-height: 424px;
+      padding: 22px 0;
+      background: $color-f;
+
+      .page-inventions-and-branding & {
+        background: $color-c;
+      }
+
+      .page-litigation-and-product-safety & {
+        background: $color-e;
+      }
+
+      .page-business-transactions-disputes & {
+        background: $color-a;
+      }
+
+      .page-employer-defense & {
+        background: $color-g;
+      }
+
+      .page-insurance-litigation & {
+        background: $color-f;
+      }
+
+      & > li {
+        padding: 0 30px;
+        background: transparent;
+        color: #fff;
+        @include transition(all .2s);
+
+        &.active, &:hover {
+          background: #fff;
+          color: $color-f;
+
+          .page-inventions-and-branding & {
+            color: $color-c;
+          }
+
+          .page-litigation-and-product-safety & {
+            color: $color-e;
+          }
+
+          .page-business-transactions-disputes & {
+            color: $color-a;
+          }
+
+          .page-employer-defense & {
+            color: $color-g;
+          }
+
+          .page-insurance-litigation & {
+            color: $color-f;
+          }
+        }
+      }
+
+      a {
+        padding: 6px 0;
+      }
+    }
+
+    .tab-btn {
+      padding: 22px 55px 22px 30px;
+      overflow: hidden;
+      letter-spacing: 5px;
+      text-overflow: ellipsis;
+      text-transform: uppercase;
+      position: relative;
+      white-space: nowrap;
+
+      &:before {
+        @include oneline-sprite-box($icons, icon-arrow-f);
+        @include pseudo-block($right: 26px, $top: 50%);
+        margin-top: -4px;
+
+        .page-inventions-and-branding & {
+          @include oneline-sprite($icons, icon-arrow-c);
+        }
+
+        .page-litigation-and-product-safety & {
+          @include oneline-sprite($icons, icon-arrow-e);
+          color: $color-e;
+        }
+
+        .page-business-transactions-disputes & {
+          @include oneline-sprite($icons, icon-arrow-a);
+          color: $color-a;
+        }
+
+        .page-employer-defense & {
+          @include oneline-sprite($icons, icon-arrow-g);
+          color: $color-g;
+        }
+
+        .page-insurance-litigation & {
+          @include oneline-sprite($icons, icon-arrow-f);
+          color: $color-f;
+        }
+      }
+
+      span {
+        text-transform: none;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      display: block;
+    }
+  }
+
+  .tabs-content {
+
+    & > ul > li {
+      display: none;
+
+      &.active {
+        display: block;
+      }
+    }
+  }
+}

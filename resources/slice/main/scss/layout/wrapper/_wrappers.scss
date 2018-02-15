@@ -1,0 +1,14 @@
+.outer-wrapper {
+  overflow: hidden;
+  position: relative;
+  min-height: 100%;
+}
+
+.content-wrapper {
+  padding-bottom: 129px;
+
+  .page-without-top-img & {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+}

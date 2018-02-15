@@ -1,0 +1,168 @@
+.site-header {
+  background: #4a656f;
+  position: relative;
+  z-index: 50;
+
+  .btn-nav {
+    display: block;
+    position: relative;
+    width: 36px;
+    height: 28px;
+    top: -2px;
+    outline: none;
+
+    &:before, &:after {
+      width: 36px;
+      height: 6px;
+      background: #fff;
+      @include transition(transform .3s, top .3s, bottom .3s, opacity .3s, background .3s);
+      @include pseudo-block($left: 0);
+    }
+
+    &:before {
+      top: 3px;
+    }
+
+    &:after {
+      bottom: 3px;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    top: 0;
+    border: 2px solid #4886a1;
+    border-top: none;
+    padding: 15px 15px 17px;
+    background: #fff;
+    z-index: 2;
+    max-width: 144px;
+
+    a {
+      display: block;
+      @include transition(opacity .3s);
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+
+  .nav, .social-links {
+    float: right;
+  }
+
+  .social-links {
+    margin-left: 25px;
+    position: relative;
+    top: -4px;
+
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin-left: 10px;
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+
+    .social-1 a {
+      @include oneline-sprite-box($icons, icon-social);
+    }
+
+    a {
+      display: block;
+      @include transition(opacity .3s);
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+  }
+
+  .nav {
+    font-family: $maven_pro_black;
+    text-transform: uppercase;
+
+    & > ul.menu {
+
+      & > li {
+
+        //        &.active {
+        //
+        //          & > a {
+        //            color: #fff;
+        //          }
+        //        }
+      }
+
+      ul {
+
+        li {
+
+          &:first-child a:before {
+            @include oneline-sprite-box($icons, icon-5);
+          }
+
+          &:nth-child(2) a:before {
+            @include oneline-sprite-box($icons, icon-2);
+          }
+
+          &:nth-child(3) a:before {
+            @include oneline-sprite-box($icons, icon-1);
+          }
+
+          &:nth-child(4) a:before {
+            @include oneline-sprite-box($icons, icon-3);
+          }
+
+          &:nth-child(5) a:before {
+            @include oneline-sprite-box($icons, icon-4);
+          }
+
+          //          &.active a {
+          //            color: #fff;
+          //          }
+
+          a {
+            padding-left: 48px;
+            display: block;
+            position: relative;
+
+            &:before {
+              @include pseudo-block($left: 0, $top: 50%);
+              @include transform(translate(0, -50%));
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+
+    li {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    color: $color-a;
+
+    &.active {
+      color: #fff;
+    }
+  }
+}
